@@ -1,0 +1,13 @@
+server:
+  port: 8443
+  ssl:
+    key-store: classpath:fdlessard-keystore.pfx
+    key-store-password: fdlessard-password
+    key-store-type: PKCS12
+    key-alias: fdlessard-key
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include=*:
