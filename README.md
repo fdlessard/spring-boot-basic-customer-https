@@ -9,11 +9,11 @@
 
 #### Creating the docker image
 
-  - docker image build . -t basic-customer
+  - docker image build . -t basic-customer-https
   
 #### Creating the docker container
   
-  - docker container create --name basic-customer-container basic-customer
+  - docker container create --name basic-customer-container-https basic-customer-https
 
 #### Running the docker container
 
@@ -23,10 +23,9 @@
   
 #### Keys (PKCS12)
   
-  keytool -genkeypair -alias my-key -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore my-keystore.pfx -validity 3650
+  - keytool -genkeypair -alias my-key -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore my-keystore.pfx -validity 3650
   
-  my-keystore-password
   
 #### Public Key
   
-  keytool -list -rfc --keystore my-keystore.pfx | C:\openssl-1.1\x64\bin\openssl x509 -inform pem -pubkey
+  - keytool -list -rfc --keystore my-keystore.pfx | C:\openssl-1.1\x64\bin\openssl x509 -inform pem -pubkey
